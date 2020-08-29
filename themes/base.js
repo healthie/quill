@@ -244,6 +244,11 @@ function extractVideoUrl(url) {
   if (match = url.match(/^(https?):\/\/(?:www\.)?vimeo\.com\/(\d+)/)) {  // eslint-disable-line no-cond-assign
     return match[1] + '://player.vimeo.com/video/' + match[2] + '/';
   }
+
+  if (url.indexOf('loom.com/share') > -1 ) {
+    return url.replace("loom.com/share", "loom.com/embed");
+  }
+
   return url;
 }
 
