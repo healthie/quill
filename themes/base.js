@@ -245,7 +245,7 @@ function extractVideoUrl(url) {
     return match[1] + '://player.vimeo.com/video/' + match[2] + '/';
   }
 
-  if (url.indexOf('loom.com/share') > -1 ) {
+  if (url.indexOf('loom.com/share') > -1) {
     return url.replace("loom.com/share", "loom.com/embed");
   }
 
